@@ -6,7 +6,7 @@ Assumes
 - unit test and code file are located in same directory
 
 ## How to
-Open <code>features/movies/controller.js</code> or <code>features/movies/controller.spec.js</code> 
+Open e.g. <code>features/movies/controller.js</code> or <code>features/movies/controller.spec.js</code> 
 
 Run <code>GoTestdriven</code> command
 
