@@ -1,5 +1,5 @@
-# Go Testdriven (Sublime Text 3 plugin)
-Opens two columns with unit test in the left group and code file in the rightmost group.
+# Go Testdriven - Sublime Text 3 package
+Opens two columns with unit test in left group and code file in right group.
 
 Assumes
 - file ending in '.spec.js' denotes a unit test file
