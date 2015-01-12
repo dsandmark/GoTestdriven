@@ -16,13 +16,18 @@ class GoTestdrivenCommand(sublime_plugin.WindowCommand):
     self.openTwoColumns()
 
     if '.spec' in fileName:
-      sublime.active_window().focus_group(1)
       fileToOpen = fileName.replace('.spec', '')
+      # In case code file is already open, move it to right group.
+      codeFileView = self.window.find_open_file(fileToOpen);
+      if codeFileView:
+        self.window.set_view_index(codeFileView, 1, 0)
+
+      self.window.focus_group(1)
     else:
       # Move code file to rightmost group.
-      sublime.active_window().focus_group(0)
+      self.window.focus_group(0)
       self.window.set_view_index(self.window.active_view(), 1, 0)
-      sublime.active_window().focus_group(0)
+      self.window.focus_group(0)
       # Open .spec file.
       fileToOpen = fileName.replace('.js', '.spec.js')
 
